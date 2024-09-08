@@ -1367,7 +1367,7 @@ Post Content
 	background: #ccc;
 }
 
-.page-wrap .entry-header {
+.page-template .entry-header {
 	margin-bottom: 30px;
 }
 
@@ -1513,11 +1513,10 @@ Post Content
     display: inline;
     background: var(--ghost-accent-color);
     box-shadow: 12px 0 0 var(--ghost-accent-color), -12px 0 0 var(--ghost-accent-color);
-	 box-decoration-break: clone;
-	  -webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
     color: #fff;
     padding: 8px 0;
-    opacity: .9;
 }
 
 .slide-meta a {
@@ -1904,7 +1903,7 @@ created within the Ghost editor. */
 
 /* Default vertical spacing */
 .gh-content > * + * {
-    margin-top: 2em;
+    margin-top: 15px;
     margin-bottom: 0;
 }
 
@@ -1916,7 +1915,7 @@ created within the Ghost editor. */
 /* Add back a top margin to all headings,
 unless a heading is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin-top: 2em;
+    margin-top: 15px;
 }
 
 /* Add drop cap setting */
@@ -1935,17 +1934,17 @@ unless a heading is the very first element in the post content */
 
 /* Add a small margin between a heading and paragraph after it */
 .gh-content > [id] + p {
-   margin-top: 2em;
+   margin-top: 15px;
 }
 
 /* A larger margin before/after dividers, blockquotes and embeds */
 .gh-content > :is(hr, blockquote, iframe) {
     position: relative;
-   margin-top: 2em;
+   	margin-top: 15px;
 }
 
 .gh-content > :is(hr, blockquote, iframe) + * {
-    margin-top: 2em;
+    margin-top: 15px;
 }
 
 /* Now the content typography styles */
