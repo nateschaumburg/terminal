@@ -1,5 +1,5 @@
 /**
- * Main JS file for Earmarked behaviours
+ * Main JS file for Earmarked behaviors
  */
 
 ( function( $ ) {
