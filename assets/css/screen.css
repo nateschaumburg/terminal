@@ -184,7 +184,6 @@ h6 {
 
 h1 {
     font-size: 4.6rem;
-    letter-spacing: -0.5px;
 }
 @media (max-width: 500px) {
     h1 {
@@ -1655,9 +1654,11 @@ Post Content
 	width: auto;
 	height: 75px;
 	opacity:1;
+	transition: all .4s ease-in-out;
 }
 .carousel.flexslider:hover .flex-direction-nav li a {
 	opacity: 1;
+	transition: all .4s ease-in-out;
 }
 
 .carousel .flex-direction-nav li .flex-next {
@@ -1950,17 +1951,14 @@ unless a heading is the very first element in the post content */
 /* Now the content typography styles */
 .gh-content h1 {
     font-size: calc(2.2em * var(--factor, 1));
-    letter-spacing: -0.02em;
 }
 
 .gh-content h2 {
     font-size: calc(1.6em * var(--factor, 1));
-    letter-spacing: -0.02em;
 }
 
 .gh-content h3 {
     font-size: calc(1.3em * var(--factor, 1));
-    letter-spacing: -0.017em;
 }
 
 .gh-content a {
@@ -2029,7 +2027,6 @@ unless a heading is the very first element in the post content */
     color: var(--color-darkgrey);
     text-align: left;
     text-transform: uppercase;
-    letter-spacing: 0.2px;
 }
 
 .gh-content .gh-table table :is(th, td),
