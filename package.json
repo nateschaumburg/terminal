@@ -1,0 +1,48 @@
+{
+    "name": "terminal",
+    "description": "Terminal is a Ghost theme allows you to showcase your creative works.",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Refueled",
+        "email": "nate@refueled.net",
+        "url": "https://refueled.net"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 7,
+        "image_sizes": {
+            "xs": {
+                "width": 150
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 720
+            },
+            "l": {
+                "width": 960
+            },
+            "xl": {
+                "width": 1200
+            },
+            "xxl": {
+                "width": 2000
+            }
+        },
+        "card_assets": true,
+        "custom": {
+            "footer_text": {
+                "type": "text"
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{meta_title}}</title>
+	<link rel="stylesheet" href="{{asset "fonts/google/stylesheet.css"}}">
+	<link rel="stylesheet" href="{{asset "fonts/font-awesome/css/all.min.css"}}">
+	<link rel="stylesheet" href="{{asset "js/flex-slider/flexslider.css"}}">
+	<link rel="stylesheet" href="{{asset "css/screen.css"}}">
+
+	{{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+<div class="gh-viewport">
+
+	<div id="page" class="site">
+
+		<header id="masthead" class="site-header">
+			<div class="header-wrapper">
+				{{#if @site.logo}}
+					<a class="site-title" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+				{{/if}}
+
+				<h1 class="site-title"><a href="{{@site.url}}">{{@site.title}}</a></h1>
+
+				<div class="nav-wrap">
+					<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">menu</button>
+					{{navigation}}
+					</nav><!-- #site-navigation -->
+				</div>
+
+				{{!-- <button class="gh-search" data-ghost-search>{{> "icons/search"}}</button> --}}
+			</div><!-- .header-wrapper -->
+		</header><!-- #masthead -->
+
+		<div id="content" class="site-content">
+
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main">
+					{{{body}}}
+				</main><!-- #main -->
+			</div><!-- #primary -->
+
+		</div><!-- #content -->
+
+	</div><!-- #page -->
+
+	<footer class="site-footer">
+		<div class="site-info">
+			<div class="social-links">
+				{{navigation type="secondary"}}
+			</div>
+
+			<section class="copyright">
+                {{#unless @custom.footer_text}}
+                    Powered by <a href="https://ghost.org/" target="_blank">Ghost</a> &amp; <a href="https://refueled.net/">Refueled</a>
+                {{else}}
+                    {{@custom.footer_text}}
+                {{/unless}}
+			</section>
+		</div>
+	</footer>
+</div>
+
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost_foot}}
+
+{{! The main JavaScript files}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{asset "js/flex-slider/jquery.flexslider-min.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/custom.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/navigation.js"}}"></script>
+
+</body>
+</html>

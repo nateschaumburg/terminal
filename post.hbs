@@ -1,0 +1,62 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+the {body} of the default.hbs template, which contains our header/footer. }}
+<!-- featured/cover image -->
+{{#post}}
+<div class="header-image" {{#if feature_image}} style="background-image: url('{{img_url feature_image}}');" {{/if}}>
+</div>
+{{/post}}
+
+<div class="minislides">
+	<div class="carousel">
+		<ul class="slides">
+			{{#post}}
+				{{#get "posts" filter="id:-{{id}}"}}
+					{{#foreach posts}}
+						<li>
+							<a href="{{url}}"><img src="{{img_url feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"></a>
+						</li>
+					{{/foreach}}
+				{{/get}}
+			{{/post}}
+		</ul>
+	</div>
+</div>
+
+<div class="page-wrap">
+	<article class="{{post_class}} hentry">
+		{{#post}} {{! Everything inside the #post tags pulls data from the post }}
+		<div class="content-wrapper">
+			<header class="entry-header gh-canvas entry-content">
+				<div class="entry-meta">{{date format="MMMM DD YYYY"}} {{#if reading_time}}<span class="gh-article-meta-length"><span class="bull">&middot;</span> {{reading_time}}</span>  {{/if}} {{#if primary_tag}}<span class="bull">&middot;</span> <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>{{/if}}
+				<h1 class="entry-title">{{{title}}}</h1>
+
+				{{#primary_author}}
+				<div class="author">
+					<p>Written by <a href="{{url}}">{{name}}</a></p>
+				</div>
+				{{/primary_author}}
+			</header><!-- .entry-header -->
+
+			<div class="gh-content gh-canvas entry-content">
+				{{! Checks for featured image. If none, use cover image if available. }}
+				{{#post}}
+					{{#if feature_image}}
+						<img src="{{img_url feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+					{{/if}}
+				{{/post}}
+
+				{{content}}
+			</div>
+		</div><!-- .content-wrapper -->
+
+	    {{#if comments}}
+	        <section class="article-comments gh-canvas">
+	            {{comments}}
+	        </section>
+	    {{/if}}
+
+		{{/post}}
+	</article>
+</div>
