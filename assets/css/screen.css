@@ -1971,18 +1971,6 @@ unless a heading is the very first element in the post content */
     font-size: 0.95em;
 }
 
-.has-serif-body .gh-content > blockquote,
-.has-serif-body .gh-content > ol,
-.has-serif-body .gh-content > ul,
-.has-serif-body .gh-content > dl,
-.has-serif-body .gh-content > p,
-.has-serif-body .gh-content .kg-callout-text,
-.has-serif-body .gh-content .kg-toggle-content > ol,
-.has-serif-body .gh-content .kg-toggle-content > ul,
-.has-serif-body .gh-content .kg-toggle-content > p {
-	font-family: 'Inter Tight';
-}
-
 .gh-content :is(ul, ol) {
     padding-left: 28px;
 }
